@@ -44,14 +44,56 @@ Now, we will upgrade ubuntu by running
 sudo apt upgrade
 
 ```
-Next, we will add certificates by running
+Next, we will install Node.js version 14.x
+We will run the following command as a user with sudo privileges to download and execute the NodeSource installation script:
+
 ```
-sudo apt -y install curl dirmngr apt-transport-https lsb-release ca-certificates
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 ```
-Afterward, we will Install NodeJS
+Afterward, we will Install NodeJS and npm
 ```
-sudo apt install -y nodejs
+sudo apt install nodejs
+```
+Next, we will verify that the Node.js and npm were successfully installed by printing their versions:
+```
+node --version
+```
+```
+npm --version
 ```
 ## Install MongoDB
+MongoDB stores data in flexible, JSON-like documents. Fields in a database can vary from document to document and data structure can be changed over time. For our example application, we are adding book records to MongoDB that contain book name, isbn number, author, and number of pages.
+
+```
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6
+echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list
+```
+### Install MongoDB and NPM
+```
+sudo apt install -y mongodb
+```
+We will start The server by running
+```
+sudo service mongodb start
+```
+Verify that the service is up and running
+```
+sudo systemctl status mongodb
+```
+After running the command, our result should be similar to the image below:
+![]()
+### Install body-parser package
+We need ‘body-parser’ package to help us process JSON files passed in requests to the server.
+```
+sudo npm install body-parser
+```
+We will create a folder named ‘Books’
+```
+mkdir Books && cd Books
+```
+In the Books directory, Initialize npm project
+```
+npm init
+```
+
 
