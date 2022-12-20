@@ -96,7 +96,7 @@ In the Books directory, Initialize npm project
 npm init
 ```
 Like the image below, click 'enter' key or type in the value you prefer
-![]()
+![](https://github.com/Omolade11/MeanStack_AWS/blob/main/Images/Screenshot%202022-12-20%20at%2014.45.32.png)
 Next, we will add a file to it named server.js
 ```
 vi server.js
@@ -314,10 +314,10 @@ Start the server by running this command:
 node server.js
 ```
 It should give you value like the image below
-![]()
+![](https://github.com/Omolade11/MeanStack_AWS/blob/main/Images/Screenshot%202022-12-20%20at%2015.01.25.png)
 The server is now up and running, we can connect it via port 3300. 
 We can view it with our public ip address and port 3300 as the port like the image below.
-![]()
+![](https://github.com/Omolade11/MeanStack_AWS/blob/main/Images/Screenshot%202022-12-20%20at%2015.08.31.png)
 We can launch a separate Putty or SSH console to test what the curl command returns locally.
 ```
 curl -s http://localhost:3300
@@ -325,7 +325,7 @@ curl -s http://localhost:3300
 
 It shall return an HTML page, it is hardly readable in the CLI, but we can also try and access it from the Internet.
 For this – we need to open TCP port 3300 in your AWS Web Console for your EC2 Instance like in the image below.
-![]()
+![](https://github.com/Omolade11/MeanStack_AWS/blob/main/Images/Screenshot%202022-12-20%20at%2015.06.31.png)
  
 
 
