@@ -81,7 +81,7 @@ Verify that the service is up and running
 sudo systemctl status mongodb
 ```
 After running the command, our result should be similar to the image below:
-![]()
+![](https://github.com/Omolade11/MeanStack_AWS/blob/main/Images/Screenshot%202022-12-20%20at%2014.08.00.png)
 ### Install body-parser package
 We need ‘body-parser’ package to help us process JSON files passed in requests to the server.
 ```
